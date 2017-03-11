@@ -17,7 +17,9 @@ namespace MapsTest.Droid
 
 		public static void SetLocation(double latitude, double longitude)
 		{
-			googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new Android.Gms.Maps.Model.LatLng(latitude, longitude), 14.0f));
+			//googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new Android.Gms.Maps.Model.LatLng(latitude, longitude), 14.0f));
+
+			googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(new Android.Gms.Maps.Model.LatLng(latitude, longitude), 14.0f));
 		}
 
 		public void OnMapReady(GoogleMap map)
