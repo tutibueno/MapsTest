@@ -52,7 +52,7 @@ namespace MapsTest.Droid
 			button.Click += ChangeMapType;
 
 
-			//Bota que abre os items salvos
+			//Botao que abre os items salvos
 			Button buttonItems = FindViewById<Button>(Resource.Id.buttonOpenItems);
 
 			buttonItems.Click += delegate {

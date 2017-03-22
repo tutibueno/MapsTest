@@ -59,6 +59,18 @@ namespace MapsTest.Droid
 
 		}
 
+		public static void DeleteData<T>(T value)
+		{
+			try
+			{
+				conn.Delete(value);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+
 		public static List<MapPosition> GetAllPositions()
 		{
 			return conn.Query<MapPosition>("select * from MapPosition");

@@ -259,6 +259,9 @@ namespace MapsTest.Droid
 			// aapt resource value: 0x7f08000a
 			public const int auto = 2131230730;
 			
+			// aapt resource value: 0x7f080013
+			public const int buttonDelete = 2131230739;
+			
 			// aapt resource value: 0x7f080012
 			public const int buttonOpenInMap = 2131230738;
 			
@@ -277,8 +280,8 @@ namespace MapsTest.Droid
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
-			// aapt resource value: 0x7f080014
-			public const int listView1 = 2131230740;
+			// aapt resource value: 0x7f080015
+			public const int listView1 = 2131230741;
 			
 			// aapt resource value: 0x7f080010
 			public const int map = 2131230736;
@@ -307,8 +310,8 @@ namespace MapsTest.Droid
 			// aapt resource value: 0x7f08000e
 			public const int textView1 = 2131230734;
 			
-			// aapt resource value: 0x7f080013
-			public const int texttest = 2131230739;
+			// aapt resource value: 0x7f080014
+			public const int texttest = 2131230740;
 			
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;

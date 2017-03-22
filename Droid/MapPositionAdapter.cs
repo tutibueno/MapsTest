@@ -21,6 +21,8 @@ namespace MapsTest.Droid
 
 		Activity context;
 
+		public static System.Action OnDeleteItem;
+
 
 		public MapPositionAdapter(MapPosition[] data, Activity context)
 		{
@@ -74,6 +76,19 @@ namespace MapsTest.Droid
 				context.StartActivity(i);
 
 
+
+			};
+
+			//Botao delete
+			var buttonDelete = view.FindViewById<Button>(Resource.Id.buttonDelete);
+
+			buttonDelete.Click += delegate {
+
+				Database.DeleteData(data[position]);
+
+
+				//Refresh list
+				OnDeleteItem();
 
 			};
 

@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace MapsTest.Droid
 {
-	[Activity(Label = "MapPositionsActivity")]
+	[Activity(Label = "Posições Salvas no Mapa")]
 	public class MapPositionsActivity : Activity
 	{
 
@@ -29,6 +29,7 @@ namespace MapsTest.Droid
 
 			listViewItems = FindViewById<ListView>(Resource.Id.listView1);
 
+			MapPositionAdapter.OnDeleteItem += RefreshListItems;
 
 		}
 
@@ -36,10 +37,14 @@ namespace MapsTest.Droid
 		{
 			base.OnResume();
 
+			RefreshListItems();
+
+		}
+
+		public void RefreshListItems()
+		{
 			var positions = Database.GetAllPositions();
-
 			MapPositionAdapter adapter = new MapPositionAdapter(positions.ToArray(), this);
-
 			listViewItems.Adapter = adapter;
 		}
 	}
